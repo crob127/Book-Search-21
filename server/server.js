@@ -4,7 +4,7 @@ const db = require('./config/connection');
 // const routes = require('./routes');
 const { ApolloServer } = require('@apollo/server');
 const { expressMiddleware } = require('@apollo/server/express4')
-// const mongoose = require('mongoose');
+const mongoose = require('mongoose');
 const { typeDefs, resolvers } = require('./schemas');
 const jwt = require('jsonwebtoken');
 
@@ -31,6 +31,13 @@ const authenticate = (req) => {
   }
   return {};
 };
+
+mongoose.connect('mongodb+srv://crob127: Oukv8pmUFqQg6Bga@cluster0.wpvt8.mongodb.net/BookSearchDB?retryWrites=true&w=majority&appName=Cluster0', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+})
+.then(() => console.log('MongoDB connected'))
+.catch(err => console.error(err));
 
 // Apollo Server set up
 const server = new ApolloServer({
