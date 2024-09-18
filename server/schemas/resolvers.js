@@ -1,4 +1,4 @@
-const { AuthenticationError } = require('apollo-server-express');
+const { AuthenticationError } = require('@apollo/server/errors');
 const { User, Book } = require('../models');
 const jwt = require('jsonwebtoken');
 
