@@ -32,7 +32,7 @@ const authenticate = (req) => {
   return {};
 };
 
-mongoose.connect('mongodb+srv://crob127: Oukv8pmUFqQg6Bga@cluster0.wpvt8.mongodb.net/BookSearchDB?retryWrites=true&w=majority&appName=Cluster0', {
+mongoose.connect('mongodb+srv://crob127:Oukv8pmUFqQg6Bga@cluster0.wpvt8.mongodb.net/BookSearchDB?retryWrites=true&w=majority&appName=Cluster0', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
